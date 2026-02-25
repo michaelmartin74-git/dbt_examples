@@ -2692,3 +2692,717 @@ select * from final
 [0m22:40:43.540108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002132D4E1D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002132653A270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002132B726F90>]}
 [0m22:40:43.541997 [debug] [MainThread]: Flushing usage events
 [0m22:40:44.604752 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:05:30.677373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB6E85160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB81F3ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB81F3B10>]}
+
+
+============================== 23:05:30.684932 | 28baa858-3ba6-436b-b3bd-74aceb2b467b ==============================
+[0m23:05:30.684932 [info ] [MainThread]: Running with dbt=1.11.4
+[0m23:05:30.686123 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\joann\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joann\\Documents\\ae-learning\\dbt_examples\\logs'}
+[0m23:06:11.172506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB750DBA0>]}
+[0m23:06:11.442429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD4F65F20>]}
+[0m23:06:11.444753 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m23:06:14.305376 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m23:06:14.986857 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m23:06:14.988485 [debug] [MainThread]: Partial parsing: added file: dbt_examples://models\marts\finance\fact_orders.sql
+[0m23:06:14.989687 [debug] [MainThread]: Partial parsing: added file: dbt_examples://models\staging\stg_stripe_payments.sql
+[0m23:06:14.990905 [debug] [MainThread]: Partial parsing: updated file: dbt_examples://models\marts\dim_customers.sql
+[0m23:06:15.955159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD4F8D250>]}
+[0m23:06:16.186467 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\manifest.json
+[0m23:06:16.198179 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\semantic_manifest.json
+[0m23:06:16.337055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB6EC7110>]}
+[0m23:06:16.339012 [info ] [MainThread]: Found 5 models, 538 macros
+[0m23:06:16.342425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD5DA5470>]}
+[0m23:06:16.350171 [info ] [MainThread]: 
+[0m23:06:16.353256 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:06:16.356691 [info ] [MainThread]: 
+[0m23:06:16.364765 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:06:16.384957 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-7ee4da2e-e172-46d6-870'
+[0m23:06:16.387130 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:06:19.559989 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-7ee4da2e-e172-46d6-870_jaffle_shop'
+[0m23:06:19.561831 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:06:21.292882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD5E3A680>]}
+[0m23:06:21.294910 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:06:21.309715 [debug] [Thread-1 (]: Began running node model.dbt_examples.fact_orders
+[0m23:06:21.311471 [info ] [Thread-1 (]: 1 of 5 START sql table model jaffle_shop.fact_orders ........................... [RUN]
+[0m23:06:21.315122 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_examples.fact_orders'
+[0m23:06:21.316520 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.fact_orders
+[0m23:06:21.345127 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.fact_orders"
+[0m23:06:21.351789 [debug] [Thread-1 (]: Began executing node model.dbt_examples.fact_orders
+[0m23:06:21.518616 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.fact_orders"
+[0m23:06:21.525395 [debug] [Thread-1 (]: On model.dbt_examples.fact_orders: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.fact_orders"} */
+
+  
+    
+
+    create or replace table `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`fact_orders`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select 
+  id as customer_id
+ ,orderid as order_id
+ ,sum(amount) as amount
+ from dbt-tutorial.stripe.payment 
+ where status = 'success'
+ group by all
+    );
+  
+[0m23:06:21.528189 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:06:23.437749 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:5f9cb469-7c53-49f5-accf-c765c1108563&page=queryresults
+[0m23:06:25.385363 [debug] [Thread-1 (]: SQL status: OK in 1.946 seconds
+[0m23:06:25.982799 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD5D77C50>]}
+[0m23:06:25.986583 [info ] [Thread-1 (]: 1 of 5 OK created sql table model jaffle_shop.fact_orders ...................... [[32mCREATE TABLE (113.0 rows, 3.8 KiB processed)[0m in 4.66s]
+[0m23:06:25.990153 [debug] [Thread-1 (]: Finished running node model.dbt_examples.fact_orders
+[0m23:06:25.991573 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_customers
+[0m23:06:25.993323 [info ] [Thread-1 (]: 2 of 5 START sql view model jaffle_shop.stg_customers .......................... [RUN]
+[0m23:06:25.996841 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.fact_orders, now model.dbt_examples.stg_customers)
+[0m23:06:25.999623 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_customers
+[0m23:06:26.009900 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_customers"
+[0m23:06:26.014283 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_customers
+[0m23:06:26.097836 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_customers"
+[0m23:06:26.103505 [debug] [Thread-1 (]: On model.dbt_examples.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_customers"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_customers`
+  OPTIONS()
+  as select * from `dbt-tutorial`.jaffle_shop.customers;
+
+
+[0m23:06:26.105824 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:06:28.047590 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:c3fc9342-64e5-4441-b02d-342a612c89e7&page=queryresults
+[0m23:06:28.557265 [debug] [Thread-1 (]: SQL status: OK in 0.508 seconds
+[0m23:06:28.574067 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD5DCABA0>]}
+[0m23:06:28.576172 [info ] [Thread-1 (]: 2 of 5 OK created sql view model jaffle_shop.stg_customers ..................... [[32mCREATE VIEW (0 processed)[0m in 2.58s]
+[0m23:06:28.579276 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_customers
+[0m23:06:28.580647 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_orders
+[0m23:06:28.582385 [info ] [Thread-1 (]: 3 of 5 START sql view model jaffle_shop.stg_orders ............................. [RUN]
+[0m23:06:28.585002 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_customers, now model.dbt_examples.stg_orders)
+[0m23:06:28.587459 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_orders
+[0m23:06:28.594999 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_orders"
+[0m23:06:28.599046 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_orders
+[0m23:06:28.612916 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_orders"
+[0m23:06:28.616885 [debug] [Thread-1 (]: On model.dbt_examples.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_orders"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_orders`
+  OPTIONS()
+  as select * from dbt-tutorial.jaffle_shop.orders;
+
+
+[0m23:06:28.620359 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:06:30.504456 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:ad2e1bb2-a282-4eaf-a04b-c247a7e76c12&page=queryresults
+[0m23:06:31.014407 [debug] [Thread-1 (]: SQL status: OK in 0.508 seconds
+[0m23:06:31.024970 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD5E616D0>]}
+[0m23:06:31.027038 [info ] [Thread-1 (]: 3 of 5 OK created sql view model jaffle_shop.stg_orders ........................ [[32mCREATE VIEW (0 processed)[0m in 2.44s]
+[0m23:06:31.030140 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_orders
+[0m23:06:31.031461 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_stripe_payments
+[0m23:06:31.033151 [info ] [Thread-1 (]: 4 of 5 START sql view model jaffle_shop.stg_stripe_payments .................... [RUN]
+[0m23:06:31.035309 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_orders, now model.dbt_examples.stg_stripe_payments)
+[0m23:06:31.038134 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_stripe_payments
+[0m23:06:31.045926 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_stripe_payments"
+[0m23:06:31.049587 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_stripe_payments
+[0m23:06:31.061646 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_stripe_payments"
+[0m23:06:31.065137 [debug] [Thread-1 (]: On model.dbt_examples.stg_stripe_payments: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_stripe_payments"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_stripe_payments`
+  OPTIONS()
+  as select * from dbt-tutorial.stripe.payment;
+
+
+[0m23:06:31.066635 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:06:32.965648 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:10cc94b5-7755-4c8f-b452-874e25803615&page=queryresults
+[0m23:06:33.216653 [debug] [Thread-1 (]: SQL status: OK in 0.250 seconds
+[0m23:06:33.229879 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD648A8D0>]}
+[0m23:06:33.231971 [info ] [Thread-1 (]: 4 of 5 OK created sql view model jaffle_shop.stg_stripe_payments ............... [[32mCREATE VIEW (0 processed)[0m in 2.19s]
+[0m23:06:33.235739 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_stripe_payments
+[0m23:06:33.237135 [debug] [Thread-1 (]: Began running node model.dbt_examples.dim_customers
+[0m23:06:33.240387 [info ] [Thread-1 (]: 5 of 5 START sql table model jaffle_shop.dim_customers ......................... [RUN]
+[0m23:06:33.243044 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_stripe_payments, now model.dbt_examples.dim_customers)
+[0m23:06:33.244705 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.dim_customers
+[0m23:06:33.257625 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.dim_customers"
+[0m23:06:33.262459 [debug] [Thread-1 (]: Began executing node model.dbt_examples.dim_customers
+[0m23:06:33.273066 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:06:34.829326 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.dim_customers"
+[0m23:06:34.833881 [debug] [Thread-1 (]: On model.dbt_examples.dim_customers: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.dim_customers"} */
+
+  
+    
+
+    create or replace table `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`dim_customers`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_customers`
+
+),
+
+ orders as (
+
+    select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status
+    from `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_orders`
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders
+
+    from orders
+
+    group by 1
+
+),
+
+customer_life_spend as (
+
+    select 
+     customer_id
+    ,sum(amount) as lifetime_value 
+    from `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`fact_orders`
+    group by 1
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders,
+        coalesce(customer_life_spend.lifetime_value,0) as lifetime_value
+    from customers
+
+    left join customer_orders using (customer_id)
+    left join customer_life_spend using (customer_id)
+
+)
+
+select * from final
+    );
+  
+[0m23:06:35.521068 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:0208209b-2c81-4004-ae02-3e2887f22ecc&page=queryresults
+[0m23:06:38.497642 [debug] [Thread-1 (]: SQL status: OK in 2.975 seconds
+[0m23:06:38.813134 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '28baa858-3ba6-436b-b3bd-74aceb2b467b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD5E01470>]}
+[0m23:06:38.815240 [info ] [Thread-1 (]: 5 of 5 OK created sql table model jaffle_shop.dim_customers .................... [[32mCREATE TABLE (100.0 rows, 6.0 KiB processed)[0m in 5.57s]
+[0m23:06:38.818581 [debug] [Thread-1 (]: Finished running node model.dbt_examples.dim_customers
+[0m23:06:38.823783 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:06:38.828084 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:06:38.829458 [debug] [MainThread]: Connection 'list_project-7ee4da2e-e172-46d6-870' was properly closed.
+[0m23:06:38.830462 [debug] [MainThread]: Connection 'list_project-7ee4da2e-e172-46d6-870_jaffle_shop' was properly closed.
+[0m23:06:38.831474 [debug] [MainThread]: Connection 'model.dbt_examples.dim_customers' was properly closed.
+[0m23:06:38.832682 [info ] [MainThread]: 
+[0m23:06:38.836713 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 22.47 seconds (22.47s).
+[0m23:06:38.852704 [debug] [MainThread]: Command end result
+[0m23:06:38.953376 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\manifest.json
+[0m23:06:38.969426 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\semantic_manifest.json
+[0m23:06:38.995589 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joann\Documents\ae-learning\dbt_examples\target\run_results.json
+[0m23:06:38.996913 [info ] [MainThread]: 
+[0m23:06:38.998860 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:06:39.001264 [info ] [MainThread]: 
+[0m23:06:39.003149 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m23:06:39.006712 [debug] [MainThread]: Command `dbt run` succeeded at 23:06:39.006134 after 68.72 seconds
+[0m23:06:39.008707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB81ECB30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD65B3B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBD65B3A70>]}
+[0m23:06:39.013448 [debug] [MainThread]: Flushing usage events
+[0m23:06:40.629818 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:15:47.538749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E873C65160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E874FE3ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E874FE3B10>]}
+
+
+============================== 23:15:47.545116 | 55a612ef-16cb-47fd-b8ac-06624a488340 ==============================
+[0m23:15:47.545116 [info ] [MainThread]: Running with dbt=1.11.4
+[0m23:15:47.549728 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\joann\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joann\\Documents\\ae-learning\\dbt_examples\\logs'}
+[0m23:16:20.026569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8742FDBA0>]}
+[0m23:16:20.210969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E812191F20>]}
+[0m23:16:20.212629 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m23:16:22.067595 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m23:16:22.463862 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m23:16:22.465203 [debug] [MainThread]: Partial parsing: updated file: dbt_examples://models\marts\dim_customers.sql
+[0m23:16:22.466192 [debug] [MainThread]: Partial parsing: updated file: dbt_examples://models\marts\finance\fact_orders.sql
+[0m23:16:23.155282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8121C9250>]}
+[0m23:16:23.248281 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\manifest.json
+[0m23:16:23.252899 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\semantic_manifest.json
+[0m23:16:23.322750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E873CA7110>]}
+[0m23:16:23.324112 [info ] [MainThread]: Found 5 models, 538 macros
+[0m23:16:23.325251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E812FA12B0>]}
+[0m23:16:23.330643 [info ] [MainThread]: 
+[0m23:16:23.331667 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:16:23.333515 [info ] [MainThread]: 
+[0m23:16:23.336378 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:16:23.350629 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-7ee4da2e-e172-46d6-870'
+[0m23:16:23.352231 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:16:25.375017 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-7ee4da2e-e172-46d6-870_jaffle_shop'
+[0m23:16:25.376498 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:16:26.813103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E812F6DF30>]}
+[0m23:16:26.814340 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:16:26.824552 [debug] [Thread-1 (]: Began running node model.dbt_examples.fact_orders
+[0m23:16:26.825923 [info ] [Thread-1 (]: 1 of 5 START sql table model jaffle_shop.fact_orders ........................... [RUN]
+[0m23:16:26.828639 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_examples.fact_orders'
+[0m23:16:26.830437 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.fact_orders
+[0m23:16:26.842977 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.fact_orders"
+[0m23:16:26.847239 [debug] [Thread-1 (]: Began executing node model.dbt_examples.fact_orders
+[0m23:16:26.893395 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:16:27.950075 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.fact_orders"
+[0m23:16:27.953308 [debug] [Thread-1 (]: On model.dbt_examples.fact_orders: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.fact_orders"} */
+
+  
+    
+
+    create or replace table `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`fact_orders`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+ id as customer_id
+,orderid as order_id
+,paymentmethod as payment_method
+,status
+,case when status = 'success' then amount end as amount
+,created as order_date
+from dbt-tutorial.stripe.payment
+    );
+  
+[0m23:16:28.530188 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:3f7eb397-00b1-4cb8-b2e1-b647ac3ff421&page=queryresults
+[0m23:16:30.471756 [debug] [Thread-1 (]: SQL status: OK in 1.940 seconds
+[0m23:16:31.034259 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E812ED3E90>]}
+[0m23:16:31.037391 [info ] [Thread-1 (]: 1 of 5 OK created sql table model jaffle_shop.fact_orders ...................... [[32mCREATE TABLE (120.0 rows, 6.3 KiB processed)[0m in 4.20s]
+[0m23:16:31.040146 [debug] [Thread-1 (]: Finished running node model.dbt_examples.fact_orders
+[0m23:16:31.041326 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_customers
+[0m23:16:31.042493 [info ] [Thread-1 (]: 2 of 5 START sql view model jaffle_shop.stg_customers .......................... [RUN]
+[0m23:16:31.043812 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.fact_orders, now model.dbt_examples.stg_customers)
+[0m23:16:31.049856 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_customers
+[0m23:16:31.055944 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_customers"
+[0m23:16:31.058817 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_customers
+[0m23:16:31.126170 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_customers"
+[0m23:16:31.129079 [debug] [Thread-1 (]: On model.dbt_examples.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_customers"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_customers`
+  OPTIONS()
+  as select * from `dbt-tutorial`.jaffle_shop.customers;
+
+
+[0m23:16:31.130356 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:16:32.423809 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:608eab50-8fbe-4027-a9ff-ccbbb472151b&page=queryresults
+[0m23:16:32.834576 [debug] [Thread-1 (]: SQL status: OK in 0.409 seconds
+[0m23:16:32.843957 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E812EEAC50>]}
+[0m23:16:32.845777 [info ] [Thread-1 (]: 2 of 5 OK created sql view model jaffle_shop.stg_customers ..................... [[32mCREATE VIEW (0 processed)[0m in 1.80s]
+[0m23:16:32.848801 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_customers
+[0m23:16:32.850676 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_orders
+[0m23:16:32.852621 [info ] [Thread-1 (]: 3 of 5 START sql view model jaffle_shop.stg_orders ............................. [RUN]
+[0m23:16:32.854805 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_customers, now model.dbt_examples.stg_orders)
+[0m23:16:32.856504 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_orders
+[0m23:16:32.862224 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_orders"
+[0m23:16:32.865318 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_orders
+[0m23:16:32.878142 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_orders"
+[0m23:16:32.881618 [debug] [Thread-1 (]: On model.dbt_examples.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_orders"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_orders`
+  OPTIONS()
+  as select * from dbt-tutorial.jaffle_shop.orders;
+
+
+[0m23:16:32.885632 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:16:34.161064 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:7f9f6407-84dd-4256-928f-7b0372007166&page=queryresults
+[0m23:16:35.080863 [debug] [Thread-1 (]: SQL status: OK in 0.918 seconds
+[0m23:16:35.090669 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E813650AF0>]}
+[0m23:16:35.091550 [info ] [Thread-1 (]: 3 of 5 OK created sql view model jaffle_shop.stg_orders ........................ [[32mCREATE VIEW (0 processed)[0m in 2.24s]
+[0m23:16:35.094348 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_orders
+[0m23:16:35.095561 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_stripe_payments
+[0m23:16:35.096911 [info ] [Thread-1 (]: 4 of 5 START sql view model jaffle_shop.stg_stripe_payments .................... [RUN]
+[0m23:16:35.098954 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_orders, now model.dbt_examples.stg_stripe_payments)
+[0m23:16:35.100870 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_stripe_payments
+[0m23:16:35.106924 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_stripe_payments"
+[0m23:16:35.110722 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_stripe_payments
+[0m23:16:35.120927 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_stripe_payments"
+[0m23:16:35.125346 [debug] [Thread-1 (]: On model.dbt_examples.stg_stripe_payments: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_stripe_payments"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_stripe_payments`
+  OPTIONS()
+  as select * from dbt-tutorial.stripe.payment;
+
+
+[0m23:16:35.126955 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:16:36.576932 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:9efcb340-4311-4776-8f5e-a3e5d1b7a4f9&page=queryresults
+[0m23:16:37.230968 [debug] [Thread-1 (]: SQL status: OK in 0.652 seconds
+[0m23:16:37.241703 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8136019D0>]}
+[0m23:16:37.243709 [info ] [Thread-1 (]: 4 of 5 OK created sql view model jaffle_shop.stg_stripe_payments ............... [[32mCREATE VIEW (0 processed)[0m in 2.14s]
+[0m23:16:37.246653 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_stripe_payments
+[0m23:16:37.247888 [debug] [Thread-1 (]: Began running node model.dbt_examples.dim_customers
+[0m23:16:37.249464 [info ] [Thread-1 (]: 5 of 5 START sql table model jaffle_shop.dim_customers ......................... [RUN]
+[0m23:16:37.253805 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_stripe_payments, now model.dbt_examples.dim_customers)
+[0m23:16:37.255138 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.dim_customers
+[0m23:16:37.266639 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.dim_customers"
+[0m23:16:37.271771 [debug] [Thread-1 (]: Began executing node model.dbt_examples.dim_customers
+[0m23:16:37.281232 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:16:38.359147 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.dim_customers"
+[0m23:16:38.363248 [debug] [Thread-1 (]: On model.dbt_examples.dim_customers: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.dim_customers"} */
+
+  
+    
+
+    create or replace table `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`dim_customers`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_customers`
+
+),
+
+ orders as (
+
+    select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status,
+        amount
+    from `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`fact_orders`
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders,
+        sum(amount) as lifetime_value
+
+    from orders
+
+    group by 1
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders,
+        coalesce(customer_orders.lifetime_value,0) as lifetime_value
+    from customers
+
+    left join customer_orders using (customer_id)
+
+)
+
+select * from final
+    );
+  
+[0m23:16:39.074770 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:e05da6e6-14ae-4042-ba61-7f1c76fbf77a&page=queryresults
+[0m23:16:39.302319 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:e05da6e6-14ae-4042-ba61-7f1c76fbf77a&page=queryresults
+[0m23:16:39.836983 [debug] [Thread-1 (]: Database Error in model dim_customers (models\marts\dim_customers.sql)
+  Unrecognized name: id at [28:9]
+  compiled code at target\run\dbt_examples\models\marts\dim_customers.sql
+[0m23:16:39.839021 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '55a612ef-16cb-47fd-b8ac-06624a488340', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E813702BA0>]}
+[0m23:16:39.840214 [error] [Thread-1 (]: 5 of 5 ERROR creating sql table model jaffle_shop.dim_customers ................ [[31mERROR[0m in 2.59s]
+[0m23:16:39.841991 [debug] [Thread-1 (]: Finished running node model.dbt_examples.dim_customers
+[0m23:16:39.843028 [debug] [Thread-4 (]: Marking all children of 'model.dbt_examples.dim_customers' to be skipped because of status 'error'.  Reason: Database Error in model dim_customers (models\marts\dim_customers.sql)
+  Unrecognized name: id at [28:9]
+  compiled code at target\run\dbt_examples\models\marts\dim_customers.sql.
+[0m23:16:39.846363 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:16:39.847329 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:16:39.847842 [debug] [MainThread]: Connection 'list_project-7ee4da2e-e172-46d6-870' was properly closed.
+[0m23:16:39.848304 [debug] [MainThread]: Connection 'list_project-7ee4da2e-e172-46d6-870_jaffle_shop' was properly closed.
+[0m23:16:39.848755 [debug] [MainThread]: Connection 'model.dbt_examples.dim_customers' was properly closed.
+[0m23:16:39.849336 [info ] [MainThread]: 
+[0m23:16:39.850404 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 16.51 seconds (16.51s).
+[0m23:16:39.853108 [debug] [MainThread]: Command end result
+[0m23:16:39.906109 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\manifest.json
+[0m23:16:39.915464 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\semantic_manifest.json
+[0m23:16:39.934171 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joann\Documents\ae-learning\dbt_examples\target\run_results.json
+[0m23:16:39.935199 [info ] [MainThread]: 
+[0m23:16:39.936251 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m23:16:39.937685 [info ] [MainThread]: 
+[0m23:16:39.940230 [error] [MainThread]: [31mFailure in model dim_customers (models\marts\dim_customers.sql)[0m
+[0m23:16:39.941640 [error] [MainThread]:   Database Error in model dim_customers (models\marts\dim_customers.sql)
+  Unrecognized name: id at [28:9]
+  compiled code at target\run\dbt_examples\models\marts\dim_customers.sql
+[0m23:16:39.943183 [info ] [MainThread]: 
+[0m23:16:39.944301 [info ] [MainThread]:   compiled code at target\compiled\dbt_examples\models\marts\dim_customers.sql
+[0m23:16:39.945166 [info ] [MainThread]: 
+[0m23:16:39.946006 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=5
+[0m23:16:39.947688 [debug] [MainThread]: Command `dbt run` failed at 23:16:39.947495 after 52.82 seconds
+[0m23:16:39.948238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8135D3350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8135D3590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E813783EF0>]}
+[0m23:16:39.948810 [debug] [MainThread]: Flushing usage events
+[0m23:16:41.197232 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:17:57.380220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232F2065160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232F33E3ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232F33E3B10>]}
+
+
+============================== 23:17:57.393728 | 41201e3d-dea8-4b59-bf19-c85432d74457 ==============================
+[0m23:17:57.393728 [info ] [MainThread]: Running with dbt=1.11.4
+[0m23:17:57.395308 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\joann\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joann\\Documents\\ae-learning\\dbt_examples\\logs'}
+[0m23:18:22.004758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232F26FDBA0>]}
+[0m23:18:22.186916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002328F1DDF20>]}
+[0m23:18:22.188600 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m23:18:24.136383 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m23:18:24.537274 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:18:24.538011 [debug] [MainThread]: Partial parsing: updated file: dbt_examples://models\marts\dim_customers.sql
+[0m23:18:25.235317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002328F20D650>]}
+[0m23:18:25.390694 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\manifest.json
+[0m23:18:25.397541 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\semantic_manifest.json
+[0m23:18:25.480012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232F20A7110>]}
+[0m23:18:25.481007 [info ] [MainThread]: Found 5 models, 538 macros
+[0m23:18:25.481961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232913BD550>]}
+[0m23:18:25.485694 [info ] [MainThread]: 
+[0m23:18:25.488359 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:18:25.490001 [info ] [MainThread]: 
+[0m23:18:25.495525 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:18:25.506105 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-7ee4da2e-e172-46d6-870'
+[0m23:18:25.507024 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:18:27.737694 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-7ee4da2e-e172-46d6-870_jaffle_shop'
+[0m23:18:27.738948 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:18:28.958788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232912D1E60>]}
+[0m23:18:28.960282 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:18:28.973086 [debug] [Thread-1 (]: Began running node model.dbt_examples.fact_orders
+[0m23:18:28.974667 [info ] [Thread-1 (]: 1 of 5 START sql table model jaffle_shop.fact_orders ........................... [RUN]
+[0m23:18:28.977822 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_examples.fact_orders'
+[0m23:18:28.978969 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.fact_orders
+[0m23:18:29.004203 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.fact_orders"
+[0m23:18:29.008093 [debug] [Thread-1 (]: Began executing node model.dbt_examples.fact_orders
+[0m23:18:29.054380 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:18:30.267863 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.fact_orders"
+[0m23:18:30.270594 [debug] [Thread-1 (]: On model.dbt_examples.fact_orders: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.fact_orders"} */
+
+  
+    
+
+    create or replace table `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`fact_orders`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+ id as customer_id
+,orderid as order_id
+,paymentmethod as payment_method
+,status
+,case when status = 'success' then amount end as amount
+,created as order_date
+from dbt-tutorial.stripe.payment
+    );
+  
+[0m23:18:31.001113 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:120bf6e7-b5d7-41e9-a305-eae7ba631831&page=queryresults
+[0m23:18:32.846942 [debug] [Thread-1 (]: SQL status: OK in 1.844 seconds
+[0m23:18:33.297681 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232912E3B90>]}
+[0m23:18:33.299981 [info ] [Thread-1 (]: 1 of 5 OK created sql table model jaffle_shop.fact_orders ...................... [[32mCREATE TABLE (120.0 rows, 6.3 KiB processed)[0m in 4.32s]
+[0m23:18:33.302855 [debug] [Thread-1 (]: Finished running node model.dbt_examples.fact_orders
+[0m23:18:33.303885 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_customers
+[0m23:18:33.304895 [info ] [Thread-1 (]: 2 of 5 START sql view model jaffle_shop.stg_customers .......................... [RUN]
+[0m23:18:33.306230 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.fact_orders, now model.dbt_examples.stg_customers)
+[0m23:18:33.307579 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_customers
+[0m23:18:33.312925 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_customers"
+[0m23:18:33.317858 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_customers
+[0m23:18:33.380487 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_customers"
+[0m23:18:33.384992 [debug] [Thread-1 (]: On model.dbt_examples.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_customers"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_customers`
+  OPTIONS()
+  as select * from `dbt-tutorial`.jaffle_shop.customers;
+
+
+[0m23:18:33.386814 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:18:34.788529 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:76c76049-1439-4d0b-91f1-d3d34502ea62&page=queryresults
+[0m23:18:35.197728 [debug] [Thread-1 (]: SQL status: OK in 0.408 seconds
+[0m23:18:35.207247 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232912FEDB0>]}
+[0m23:18:35.209093 [info ] [Thread-1 (]: 2 of 5 OK created sql view model jaffle_shop.stg_customers ..................... [[32mCREATE VIEW (0 processed)[0m in 1.90s]
+[0m23:18:35.212040 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_customers
+[0m23:18:35.213280 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_orders
+[0m23:18:35.214626 [info ] [Thread-1 (]: 3 of 5 START sql view model jaffle_shop.stg_orders ............................. [RUN]
+[0m23:18:35.217398 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_customers, now model.dbt_examples.stg_orders)
+[0m23:18:35.219458 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_orders
+[0m23:18:35.225725 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_orders"
+[0m23:18:35.228814 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_orders
+[0m23:18:35.244253 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_orders"
+[0m23:18:35.247528 [debug] [Thread-1 (]: On model.dbt_examples.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_orders"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_orders`
+  OPTIONS()
+  as select * from dbt-tutorial.jaffle_shop.orders;
+
+
+[0m23:18:35.248941 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:18:36.836912 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:380b34e9-a7dc-4248-bd05-6b2d0a0bbcbc&page=queryresults
+[0m23:18:37.142615 [debug] [Thread-1 (]: SQL status: OK in 0.304 seconds
+[0m23:18:37.151835 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023291AE8050>]}
+[0m23:18:37.153954 [info ] [Thread-1 (]: 3 of 5 OK created sql view model jaffle_shop.stg_orders ........................ [[32mCREATE VIEW (0 processed)[0m in 1.93s]
+[0m23:18:37.156681 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_orders
+[0m23:18:37.157903 [debug] [Thread-1 (]: Began running node model.dbt_examples.stg_stripe_payments
+[0m23:18:37.159461 [info ] [Thread-1 (]: 4 of 5 START sql view model jaffle_shop.stg_stripe_payments .................... [RUN]
+[0m23:18:37.161331 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_orders, now model.dbt_examples.stg_stripe_payments)
+[0m23:18:37.162983 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.stg_stripe_payments
+[0m23:18:37.169494 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.stg_stripe_payments"
+[0m23:18:37.174267 [debug] [Thread-1 (]: Began executing node model.dbt_examples.stg_stripe_payments
+[0m23:18:37.182848 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.stg_stripe_payments"
+[0m23:18:37.187245 [debug] [Thread-1 (]: On model.dbt_examples.stg_stripe_payments: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.stg_stripe_payments"} */
+
+
+  create or replace view `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_stripe_payments`
+  OPTIONS()
+  as select * from dbt-tutorial.stripe.payment;
+
+
+[0m23:18:37.189726 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:18:38.576253 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:c0da5d77-b818-4ac0-9f83-5726657f0d4d&page=queryresults
+[0m23:18:39.498465 [debug] [Thread-1 (]: SQL status: OK in 0.921 seconds
+[0m23:18:39.509020 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023291A11650>]}
+[0m23:18:39.510851 [info ] [Thread-1 (]: 4 of 5 OK created sql view model jaffle_shop.stg_stripe_payments ............... [[32mCREATE VIEW (0 processed)[0m in 2.35s]
+[0m23:18:39.514064 [debug] [Thread-1 (]: Finished running node model.dbt_examples.stg_stripe_payments
+[0m23:18:39.515303 [debug] [Thread-1 (]: Began running node model.dbt_examples.dim_customers
+[0m23:18:39.516828 [info ] [Thread-1 (]: 5 of 5 START sql table model jaffle_shop.dim_customers ......................... [RUN]
+[0m23:18:39.518881 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_examples.stg_stripe_payments, now model.dbt_examples.dim_customers)
+[0m23:18:39.521050 [debug] [Thread-1 (]: Began compiling node model.dbt_examples.dim_customers
+[0m23:18:39.530416 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_examples.dim_customers"
+[0m23:18:39.533548 [debug] [Thread-1 (]: Began executing node model.dbt_examples.dim_customers
+[0m23:18:39.547105 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:18:40.830643 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_examples.dim_customers"
+[0m23:18:40.834964 [debug] [Thread-1 (]: On model.dbt_examples.dim_customers: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "dbt_examples", "target_name": "dev", "node_id": "model.dbt_examples.dim_customers"} */
+
+  
+    
+
+    create or replace table `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`dim_customers`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`stg_customers`
+
+),
+
+ orders as (
+
+    select
+        order_id,
+        customer_id,
+        order_date,
+        status,
+        amount
+    from `project-7ee4da2e-e172-46d6-870`.`jaffle_shop`.`fact_orders`
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders,
+        sum(amount) as lifetime_value
+
+    from orders
+
+    group by 1
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders,
+        coalesce(customer_orders.lifetime_value,0) as lifetime_value
+    from customers
+
+    left join customer_orders using (customer_id)
+
+)
+
+select * from final
+    );
+  
+[0m23:18:41.548242 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-7ee4da2e-e172-46d6-870&j=bq:US:3e95cb8d-3986-4065-a642-adf6a178d308&page=queryresults
+[0m23:18:44.003684 [debug] [Thread-1 (]: SQL status: OK in 2.454 seconds
+[0m23:18:44.213168 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '41201e3d-dea8-4b59-bf19-c85432d74457', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023291403BD0>]}
+[0m23:18:44.214348 [info ] [Thread-1 (]: 5 of 5 OK created sql table model jaffle_shop.dim_customers .................... [[32mCREATE TABLE (100.0 rows, 5.6 KiB processed)[0m in 4.69s]
+[0m23:18:44.216588 [debug] [Thread-1 (]: Finished running node model.dbt_examples.dim_customers
+[0m23:18:44.219289 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:18:44.220573 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:18:44.221213 [debug] [MainThread]: Connection 'list_project-7ee4da2e-e172-46d6-870' was properly closed.
+[0m23:18:44.221768 [debug] [MainThread]: Connection 'list_project-7ee4da2e-e172-46d6-870_jaffle_shop' was properly closed.
+[0m23:18:44.222302 [debug] [MainThread]: Connection 'model.dbt_examples.dim_customers' was properly closed.
+[0m23:18:44.223956 [info ] [MainThread]: 
+[0m23:18:44.225225 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 18.73 seconds (18.73s).
+[0m23:18:44.231243 [debug] [MainThread]: Command end result
+[0m23:18:44.298118 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\manifest.json
+[0m23:18:44.302896 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joann\Documents\ae-learning\dbt_examples\target\semantic_manifest.json
+[0m23:18:44.315914 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joann\Documents\ae-learning\dbt_examples\target\run_results.json
+[0m23:18:44.316767 [info ] [MainThread]: 
+[0m23:18:44.317783 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:18:44.318756 [info ] [MainThread]: 
+[0m23:18:44.319728 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m23:18:44.321538 [debug] [MainThread]: Command `dbt run` succeeded at 23:18:44.321322 after 47.30 seconds
+[0m23:18:44.322129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329053C350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023291B33C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023291B33BF0>]}
+[0m23:18:44.322705 [debug] [MainThread]: Flushing usage events
+[0m23:18:45.520352 [debug] [MainThread]: An error was encountered while trying to flush usage events
