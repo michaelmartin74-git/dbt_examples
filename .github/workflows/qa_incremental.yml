@@ -2,7 +2,7 @@ name: QA Daily Incremental Run
 
 on:
   schedule:
-    - cron: '0 5 * * 1-6'
+    - cron: '0 5 * * 1-7' # 5:00 AM, Monday to Sunday
 
 jobs:
   run_dbt:
