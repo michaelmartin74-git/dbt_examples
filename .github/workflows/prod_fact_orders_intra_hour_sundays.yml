@@ -1,0 +1,24 @@
+name: Fact Orders Intrahour Refresh
+
+on:
+  schedule:
+    # Midnight to 3:45 AM
+    - cron: '*/15 0-3 * * 0'
+    # 6:00 AM to 11:45 PM
+    - cron: '*/15 6-23 * * 0'
+
+jobs:
+  run_dbt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main # Explicitly run the production code
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-core dbt-bigquery
+          dbt deps
+
+      - name: Execute Full Refresh
+        run: dbt build -s +fact_orders --target prod
