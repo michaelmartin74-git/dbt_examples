@@ -1,0 +1,21 @@
+name: Production Full Refresh
+
+on:
+  schedule:
+    - cron: '0 5 * * 0' # 5:00 AM on Sunday
+
+jobs:
+  run_dbt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main # Explicitly run the production code
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-core dbt-bigquery
+          dbt deps
+
+      - name: Execute Full Refresh
+        run: dbt build --target prod --full-refresh
