@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: QA # Explicitly run the QA code
+          ref: dev_qa # Explicitly run the QA code
 
       - name: Install dependencies
         run: |
