@@ -1,0 +1,21 @@
+name: QA Full Refresh
+
+on:
+  schedule:
+    - cron: '0 5 * * 0'
+
+jobs:
+  run_dbt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev_qa # Explicitly run the QA code
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-core dbt-bigquery
+          dbt deps
+
+      - name: Execute QA Full Refresh
+        run: dbt build --target qa --full-refresh

@@ -1,0 +1,21 @@
+name: QA Daily Incremental Run
+
+on:
+  schedule:
+    - cron: '0 5 * * 1-6'
+
+jobs:
+  run_dbt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev_qa
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-core dbt-bigquery
+          dbt deps
+
+      - name: Execute QA Incremental Run
+        run: dbt build --target qa
