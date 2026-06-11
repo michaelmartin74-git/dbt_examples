@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: "Stripe order details, amount limited to only successful transactions"
+    columns:
+
+      - name: customer_id
+        description: "Foreign key referencing customers."
+        data_tests:
+          - relationships:
+              arguments: # Add this line
+                to: ref('stg_stripe_payments')
+                field: customer_id
+
+      - name: order_id
+        description: "Foreign key referencing orders."
+        data_tests:
+          - relationships:
+              arguments: # Add this line
+                to: ref('stg_stripe_payments')
+                field: order_id
+
+      - name: payment_method
+        description: "Method of payment."
+        data_tests:
+          - relationships:
+              arguments: # Add this line
+                to: ref('stg_stripe_payments')
+                field: payment_method
+
+      - name: payment_status
+        description: "Status of payment transaction."
+        data_tests:
+          - relationships:
+              arguments: # Add this line
+                to: ref('stg_stripe_payments')
+                field: payment_status
+
+      - name: amount
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0 
+                strictly: false
+
+          - dbt_expectations.expect_column_mean_to_be_between:
+              arguments:
+                min_value: 0
+                group_by: [customer_id]
+                strictly: false
+        

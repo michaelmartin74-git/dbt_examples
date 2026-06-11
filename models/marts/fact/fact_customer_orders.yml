@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fact_customer_orders
+    description: "Consumption layer stripe transactions plus customer details"
+    columns:
+
+      - name: customer_id
+        description: "Foreign key referencing customers."
+        data_tests:
+          - relationships:
+              arguments: # Add this line
+                to: ref('dim_customers')
+                field: customer_id

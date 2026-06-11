@@ -1,4 +1,15 @@
-
+# dbt artifacts
 target/
 dbt_packages/
+dbt_modules/
 logs/
+
+# Security & Credentials
+.env
+profiles.yml
+
+# Python environment
+venv/
+.venv/
+__pycache__/
+*.pyc

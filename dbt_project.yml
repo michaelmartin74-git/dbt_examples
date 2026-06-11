@@ -31,7 +31,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_examples:
+    +meta:
+        required_tests: {"unique.*|not_null": 1}
+        
     staging:
-      +materialized: view
+      +materialized: view 
+
     marts:
       +materialized: table
+      +meta:
+        required_tests:
+          "relationships": 1 #requires at least 1 relationship test per model

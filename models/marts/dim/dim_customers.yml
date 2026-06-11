@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Contains all customer attributes"
+    columns:
+      - name: customer_id
+        description: "Foreign key referencing customers."
+        data_tests:
+          - dbt_utils.cardinality_equality:
+              field: customer_id
+              to: ref('stg_customers')

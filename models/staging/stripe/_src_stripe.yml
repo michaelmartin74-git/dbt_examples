@@ -1,0 +1,45 @@
+version: 2
+
+sources: 
+  - name: stripe
+    database: dbt-tutorial
+    schema: stripe
+    tables:
+      - name: payment
+        config:
+          loaded_at_field: _batched_at
+          freshness:
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 48, period: hour}
+          
+        columns:
+          - name: orderid
+            description: primary key
+            data_tests:
+              - not_null
+
+          - name: id
+            description: customer id
+            data_tests:
+              - unique:
+                  config:
+                    severity: error
+                    warn_if: '>10'
+                    error_if: '>100'
+
+          - name: paymentmethod
+            data_tests:
+              - accepted_values:
+                  arguments:
+                    values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
+                    config:
+                      where: "status = 'success'"
+
+          - name: status
+            data_tests:
+              - accepted_values:
+                  arguments:
+                    values: ['success', 'fail']
+                    config:
+                      limit: 10
+                      store_failures: true

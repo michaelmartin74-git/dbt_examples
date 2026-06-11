@@ -1,0 +1,10 @@
+macros:
+  - name: convert_to_decimals
+    description: "Convert a percentage stored as an integer to a decimal. For example, 25 becomes 0.25."
+    arguments:
+      - name: column_name
+        description: "The name of the column containing the percentage values as integers."
+        type: string
+      - name: decimals
+        description: "The number of decimal places to round the result to. Default is 2."
+        type: integer
